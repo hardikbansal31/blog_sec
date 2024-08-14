@@ -2,7 +2,6 @@
 * {
     margin: 0;
     padding: 0;
-    /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
     box-sizing: border-box;
 }
 
@@ -12,9 +11,12 @@
     display: flex;
 }
 
-.trending-blog {
+.margin {
     margin-left: 10vw;
-    margin-top: 5px;
+    margin-top: 5px
+}
+
+.trending-blog {
     color: wheat;
 }
 
@@ -38,4 +40,19 @@
     border-radius: 5px;
     font-size: 15px;
     padding: 5px;
+}
+
+.explore {
+    background-color: wheat;
+    color: black;
+    margin-top: -5px;
+}
+
+.exp-blogs {
+    display: flex;
+    justify-content: center;
+}
+
+.prev-blog {
+    margin: 10px;
 }

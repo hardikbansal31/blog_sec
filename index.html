@@ -1,34 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Blog Page</title>
-    <link rel="stylesheet" href="home.css" />
-  </head>
 
-  <body>
-    <a href="navbar.html">navbar</a>
-    <div class="trending">
-      <div class="trend-left">
-        <p class="trending-blog">#1 Today is...</p>
-        <h1 class="trending-blog">Trending Blog</h1>
-        <p class="trending-blog"><a href="author.html">By Author</a>, 5 min read</p>
-        <button class="btn trending-blog">Start Reading</button>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog Page</title>
+  <link rel="stylesheet" href="nav.css">
+  <link rel="stylesheet" href="home.css" />
+</head>
+
+<body>
+  <div class="nav">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="categ.html">Categories</a></li>
+    <li><a href="about.html">About Us</a></li>
+    <button class="nav-btn">Create Blog</button>
+  </div>
+  <!-- trending -->
+  <div class="trending">
+    <div class="trend-left">
+      <p class="trending-blog margin">#1 Today is...</p>
+      <h1 class="trending-blog margin">Trending Blog</h1>
+      <p class="trending-blog margin"><a href="author.html">By Author</a>, 5 min read</p>
+      <button class="btn trending-blog margin">Start Reading</button>
+    </div>
+    <div class="trend-right">
+      <img src="" alt="author img">
+    </div>
+  </div>
+
+  <!-- explore -->
+
+  <div class="explore">
+    <h2 class="margin">Explore more blogs</h2>
+    <div class="exp-blogs margin">
+      <div class="prev-blog">
+        <img src="" alt="first blog">
       </div>
-      <div class="trend-right">
-        <img src="" alt="author img">
+      <div class="prev-blog">
+        <img src="" alt="second blog">
+      </div>
+      <div class="prev-blog">
+        <img src="" alt="third blog">
       </div>
     </div>
+  </div>
+  <div class="about">
+    <p>About us, copywrite, licences, customer support, report</p>
+  </div>
+</body>
 
-
-
-    <div class="explore">
-      <h2>Explore more blogs</h2>
-      <p>display 3 blogs side by side</p>
-    </div>
-    <div class="about">
-      <p>About us, copywrite, licences, customer support, report</p>
-    </div>
-  </body>
 </html>
