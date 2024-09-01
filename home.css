@@ -5,15 +5,17 @@
     box-sizing: border-box;
 }
 
+/* marging for structure */
+.margin {
+    margin-left: 10vw;
+    padding-top: 5px;
+    margin-right: 10vw;
+}
+
 .trending {
     background-color: black;
     padding: 80px;
     display: flex;
-}
-
-.margin {
-    margin-left: 10vw;
-    margin-top: 5px
 }
 
 .trending-blog {
@@ -40,8 +42,10 @@
     border-radius: 5px;
     font-size: 15px;
     padding: 5px;
+    margin-top: 2px;
 }
 
+/* explore */
 .explore {
     background-color: wheat;
     color: black;
@@ -54,5 +58,13 @@
 }
 
 .prev-blog {
-    margin: 10px;
+    margin: 3%;
+    cursor: pointer;
+    display: block;
+    width: 100vw;
+}
+
+.exp-blogs img {
+    width: 100%;
+    border-radius: 10px;
 }
