@@ -11,17 +11,17 @@
 }
 
 .abt-left{
-    margin-right: 30vw;
+    margin-right: 20vw;
 }
 
 .abt-right{
     align-content: center;
+    margin-right: 30vw;
 }
 
-.margin {
+.abt-para {
     margin-left: 10vw;
     padding-top: 5px;
-    margin-right: 10vw;
 }
 
 .heading {
