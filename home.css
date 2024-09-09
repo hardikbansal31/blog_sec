@@ -1,16 +1,12 @@
 /* to remv defaults and enable consistent styling */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    /* background-color: black; */
     font-family: 'Times New Roman', Times, serif;
 }
 
 /* marging for structure */
 .margin {
     margin-left: 10vw;
-    padding-top: 5px;
+    /* padding-top: 5px; */
     margin-right: 10vw;
 }
 
@@ -24,6 +20,14 @@
     color: wheat;
 }
 
+.col-wh{
+    color: wheat;
+}
+
+.col-wh:hover{
+    color: white;
+}
+
 .trending-blog a {
     color: wheat;
 }
@@ -34,28 +38,19 @@
 }
 
 .btn {
-    outline: none;
-    font-family: 'Times New Roman', Times, serif;
-    cursor: pointer;
-    color: black;
-    border: 1px solid wheat;
-    background-color: wheat;
+    border: 1px solid black;
     border-radius: 5px;
-    font-size: 15px;
-    padding: 5px;
-    margin-top: 2px;
+}
+
+.btn:hover{
+    border: 1px solid black;
+    color: white;
 }
 
 /* explore */
 .explore {
     background-color: wheat;
     color: black;
-    margin-top: -5px;
-}
-
-.exp-blogs {
-    display: flex;
-    justify-content: center;
 }
 
 .prev-blog {
