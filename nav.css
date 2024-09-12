@@ -1,50 +1,32 @@
-/* to remv defaults and enable consistent styling */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+.margin {
+    margin-left: 10vw;
+    margin-right: 10vw;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
-/* navbar */
-.nav {
-    padding-top: 10px;
-    display: flex;
-    list-style: none;
-    background-color: black;
-}
-
-.nav li a {
-    text-decoration: none;
-    cursor: pointer;
-    margin: 10px;
-    color: white;
-}
-
-.nav li a:hover {
-    color: wheat;
-    transition: 0.5s;
-}
-
-.nav-btn {
-    border: none;
-    font-family: 'Times New Roman', Times, serif;
-    outline: none;
-    background-color: black;
-    color: white;
-    margin-left: 10px;
-    cursor: pointer;
-    font-size: 17px;
+.btn {
+    border: 1px solid black;
     border-radius: 5px;
-    padding-left: 3px;
-    padding-right: 3px;
+    color: wheat;
 }
 
-.nav-btn:hover {
-    background-color: wheat;
-    transition: 0.5s;
-    color: black;
+.btn:hover {
+    border: 1px solid black;
+    color: white;
+}
+
+.col-wh {
+    color: wheat;
+}
+
+.col-wh:hover {
+    color: white;
+}
+
+.form-control::placeholder {
+    color: lightgrey;
+    opacity: 1;
+}
+
+#text-box {
+    min-height: 200px;
 }

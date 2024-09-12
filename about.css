@@ -1,31 +1,28 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
     background-color: black;
     color: wheat;
     font-family: 'Times New Roman', Times, serif;
 }
 
-.abt {
+ .abt {
     display: flex;
 }
 
-.abt-left{
-    margin-right: 20vw;
-}
-
-.abt-right{
-    align-content: center;
-    margin-right: 30vw;
-}
-
-.abt-para {
-    margin-left: 10vw;
-    padding-top: 5px;
+.abt img{
+    width: 30vw;
+    border-radius: 10px;
 }
 
 .heading {
-    margin-left: 5vw;
     margin-top: 35px;
+}
+
+#email,
+#name,
+#text-box {
+    color: wheat;
+}
+
+#text-box {
+    height: 40px;
 }

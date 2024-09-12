@@ -4,11 +4,6 @@
 }
 
 /* marging for structure */
-.margin {
-    margin-left: 10vw;
-    /* padding-top: 5px; */
-    margin-right: 10vw;
-}
 
 .trending {
     background-color: black;
@@ -37,30 +32,17 @@
     color: wheat;
 }
 
-.btn {
-    border: 1px solid black;
-    border-radius: 5px;
-}
-
-.btn:hover{
-    border: 1px solid black;
-    color: white;
-}
-
 /* explore */
 .explore {
     background-color: wheat;
     color: black;
 }
 
-.prev-blog {
-    margin: 3%;
-    cursor: pointer;
-    display: block;
-    width: 100vw;
-}
-
 .exp-blogs img {
     width: 100%;
     border-radius: 10px;
+}
+
+.hover {
+    cursor: pointer;
 }
