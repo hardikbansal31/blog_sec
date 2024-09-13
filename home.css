@@ -4,7 +4,6 @@
 }
 
 /* marging for structure */
-
 .trending {
     background-color: black;
     padding: 80px;
@@ -28,8 +27,11 @@
 }
 
 .trend-right {
-    margin-left: 30vw;
+    margin-left: 20vw;
     color: wheat;
+}
+.trend-left{
+    margin-right: 10vw;
 }
 
 /* explore */
