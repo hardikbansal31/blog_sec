@@ -47,7 +47,8 @@
           </li>
         </ul>
         <form class="d-flex" role="search">
-          <input class="form-control me-2 bg-dark col-wh border-dark" type="search" placeholder="Search" aria-label="Search">
+          <input class="form-control me-2 bg-dark col-wh border-dark" type="search" placeholder="Search"
+            aria-label="Search">
           <button class="btn btn-outline-success bg-dark col-wh" type="submit">Search</button>
         </form>
       </div>
@@ -117,6 +118,29 @@
       </svg>
     </div>
   </div>
+
+  <li><a href="#" onclick="getBlog(1)">Blog Post 1</a></li>
+
+  <div id="r_blog">
+
+  </div>
+
+  <script>
+    // Fetch the blog post when clicking the link
+    function getBlog(id) {
+      fetch('http://localhost:9000/api/blogs')
+        .then(response => response.json())
+        .then(data => {
+          const blogsContainer = document.getElementById('r_blog');
+          data.forEach(blog => {
+            const blogElement = document.createElement('div');
+            blogElement.innerHTML = `<h2>${blog.title}</h2>`;
+            blogsContainer.appendChild(blogElement);
+          });
+        });
+      // .catch (error => console.error('cant fetch blog: ', error));
+    }
+  </script>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
