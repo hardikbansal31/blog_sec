@@ -1,0 +1,13 @@
+*{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.content-margin {
+    margin-left: 20vw;
+    margin-right: 20vw;
+}
+
+.by-line {
+    color: gray;
+    font-size: 20px;
+}

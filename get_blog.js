@@ -14,7 +14,7 @@ const pool = createPool({
 })
 
 app.get('/api/blogs', (req, res) => {
-    pool.query(`SELECT * FROM blogs`, (err, result) => {
+    pool.query(`SELECT * FROM blogs WHERE id = 3`, (err, result) => {
         if (err) {
             return res.status(500).json({ error: err.message });
         }
