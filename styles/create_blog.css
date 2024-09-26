@@ -1,0 +1,12 @@
+* {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.create-blog {
+    display: flex;
+}
+
+.form-group {
+    margin-top: 5px;
+    margin-bottom: 50px;
+}
