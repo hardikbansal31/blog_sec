@@ -1,7 +1,7 @@
 const express = require('express');
 const { createPool } = require('mysql');
 const app = express();
-const port = 9001;
+const port = 9000;
 const cors = require('cors');
 app.use(cors());
 
@@ -14,11 +14,17 @@ const pool = createPool({
 });
 
 app.get('/api/blogs', (req, res) => {
-    pool.query(`INSERT INTO blogs (title, content) values (${title}, ${content})`, (err, result) => {
+    const { title, content } = req.query;
+    if (!title || !content) {
+        return res.status(400).json({ error: "no title or query" });
+    }
+    const q = `INSERT INTO blogs (title, content) values (?, ?)`;
+
+    pool.query(q, [title, content], (err, result) => {
         if (err) {
             return res.status(500).json({ error: err.message });
         }
-        res.json(result);
+        res.status(200).json({ message: 'Blog added successfully!', blogID: result.insertId });
     });
 });
 
