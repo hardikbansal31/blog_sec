@@ -1,3 +1,25 @@
 body {
     background-color: wheat;
 }
+
+.sres {
+    margin-left: 7vw;
+    margin-right: 7vw;
+    /* background-color: aliceblue; */
+    /* border: 2px solid black; */
+    margin-top: 20px;
+}
+
+.sres img {
+    width: 50%;
+    border-radius: 10px;
+}
+
+.prev {
+    display: flex;
+    /* background-color: aqua; */
+}
+
+.prevD {
+    margin: 7px;
+}
