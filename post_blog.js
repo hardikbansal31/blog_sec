@@ -13,21 +13,4 @@ const pool = createPool({
     connectionLimit: 10
 });
 
-app.get('/api/blogs', (req, res) => {
-    const { title, content } = req.query;
-    if (!title || !content) {
-        return res.status(400).json({ error: "no title or query" });
-    }
-    const q = `INSERT INTO blogs (title, content) values (?, ?)`;
 
-    pool.query(q, [title, content], (err, result) => {
-        if (err) {
-            return res.status(500).json({ error: err.message });
-        }
-        res.status(200).json({ message: 'Blog added successfully!', blogID: result.insertId });
-    });
-});
-
-app.listen(port, () => {
-    console.log(`server running on localhost ${port}`);
-});

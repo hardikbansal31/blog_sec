@@ -58,6 +58,26 @@
         </div>
     </nav>
 
+
+<script>
+    // Fetch the blog post when clicking the link
+    document.addEventListener("DOMContentLoaded", function getBlog(id) {
+        fetch('http://localhost:9000/api/blogs/search')
+            .then(response => response.json())
+            .then(data => {
+                const blogsContainer = document.getElementById('r_blog');
+                data.forEach(blog => {
+                    const blogElement = document.createElement('div');
+                    blogElement.innerHTML = `<h1 class="content-margin">${blog.title}</h1>
+                            <p class="content-margin by-line"><i>By Hardik Bansal, 5 min read</i></p>
+                            <p class="content-margin">${blog.content}</p`;
+                    blogsContainer.appendChild(blogElement);
+                });
+            });
+        // .catch (error => console.error('cant fetch blog: ', error));
+    });
+</script>
+
     <div class="row sres">
         <div class="col-md-6 col-sm-12 prev">
             <img src="imgs/blog_placeholder.png" alt="img">

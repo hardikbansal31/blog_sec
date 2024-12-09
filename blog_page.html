@@ -81,7 +81,7 @@
     <script>
         // Fetch the blog post when clicking the link
         document.addEventListener("DOMContentLoaded", function getBlog(id) {
-                fetch('http://localhost:9000/api/blogs')
+                fetch('http://localhost:9000/api/blogs/get')
                     .then(response => response.json())
                     .then(data => {
                         const blogsContainer = document.getElementById('r_blog');
