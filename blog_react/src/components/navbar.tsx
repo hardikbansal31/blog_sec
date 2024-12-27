@@ -1,13 +1,12 @@
-import NavStyle from "./styles/nav.css"
+import Logo from "../assets/imgs/lamborghini_logo copy.png";
 
 const navbar = () => {
   return (
     <>
       <nav className="navbar navbar-expand-lg bg-black">
         <div className="container-fluid container">
-          {/* <!-- <a className="navbar-brand  col-wh" href="index.html">Home with icon</a> --> */}
           <img
-            src="imgs/lamborghini_logo copy.png"
+            src= {Logo}
             alt="home icon"
             className="navbar-brand nav-img"
           />
@@ -28,13 +27,13 @@ const navbar = () => {
                 <a
                   className="nav-link col-wh"
                   aria-current="page"
-                  href="index.html"
+                  href="/"
                 >
                   Home
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link col-wh" href="about.html">
+                <a className="nav-link col-wh" href="/about">
                   About Us
                 </a>
               </li>

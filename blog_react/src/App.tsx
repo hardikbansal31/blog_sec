@@ -1,18 +1,37 @@
-// import { useState } from 'react'
-// import reactLogo from './assets/react.svg'
-// import viteLogo from '/vite.svg'
-// import './App.css'
 import Navbar from "./components/navbar";
-import Commonheader from "./components/commonheader";
-import "./components/css/bootstrap.min.css";
 
-function App() {
-  // const [count, setCount] = useState(0)
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.bundle.min.js";
+import "./components/styles/nav.css";
 
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+
+function Home() {
   return (
     <>
-      <Commonheader />
-      <Navbar />
+      <h1>home</h1>
+    </>
+  );
+}
+
+function About() {
+  return (
+    <>
+      <h1>about</h1>
+    </>
+  );
+}
+
+function App() {
+  return (
+    <>
+      <Router>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+        </Routes>
+      </Router>
     </>
   );
 }
