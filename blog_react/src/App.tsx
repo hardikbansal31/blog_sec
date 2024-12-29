@@ -1,23 +1,27 @@
-import Navbar from "./components/navbar";
+import Navbar from "./components/Navbar";
+import About from "./components/About";
+import Home from "./components/Home";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import "./components/styles/nav.css";
 
+// import './components/styles/Home.css';
+
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
-function Home() {
+function HomeFn() {
   return (
     <>
-      <h1>home</h1>
+      <Home />
     </>
   );
 }
 
-function About() {
+function AboutFn() {
   return (
     <>
-      <h1>about</h1>
+      <About />
     </>
   );
 }
@@ -28,8 +32,8 @@ function App() {
       <Router>
         <Navbar />
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
+          <Route path="/" element={<HomeFn />} />
+          <Route path="/about" element={<AboutFn />} />
         </Routes>
       </Router>
     </>

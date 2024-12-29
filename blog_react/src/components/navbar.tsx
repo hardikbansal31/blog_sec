@@ -1,4 +1,4 @@
-import Logo from "../assets/imgs/lamborghini_logo copy.png";
+import Logo from "../assets/imgs/lambo_logo.webp";
 
 const navbar = () => {
   return (
