@@ -1,6 +1,7 @@
 import Navbar from "./components/Navbar";
 import About from "./components/About";
 import Home from "./components/Home";
+import Create_blog from "./components/create_blog";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
@@ -26,6 +27,14 @@ function AboutFn() {
   );
 }
 
+function CreateFn() {
+  return (
+    <>
+      <Create_blog />
+    </>
+  );
+}
+
 function App() {
   return (
     <>
@@ -34,6 +43,7 @@ function App() {
         <Routes>
           <Route path="/" element={<HomeFn />} />
           <Route path="/about" element={<AboutFn />} />
+          <Route path="/create" element={<CreateFn />} />
         </Routes>
       </Router>
     </>

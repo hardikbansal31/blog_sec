@@ -73,7 +73,7 @@ const navbar = () => {
                   className="btn btn-outline-success bg-dark col-wh"
                   type="button"
                 >
-                  <a href="create_blog.html" className="col-wh">
+                  <a href="/create" className="col-wh">
                     Create Blog
                   </a>
                 </button>
