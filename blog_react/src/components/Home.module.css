@@ -10,27 +10,27 @@
     display: flex;
 }
 
-.trending-blog {
+.trending_blog {
     color: wheat;
 }
 
-.col-wh{
+.col_wh{
     color: wheat;
 }
 
-.col-wh:hover{
+.col_wh:hover{
     color: white;
 }
 
-.trending-blog a {
+.trending_blog a {
     color: wheat;
 }
 
-.trend-right {
+.trend_right {
     margin-left: 20vw;
     color: wheat;
 }
-.trend-left{
+.trend_left{
     margin-right: 10vw;
 }
 
@@ -40,7 +40,7 @@
     color: black;
 }
 
-.exp-blogs img {
+.exp_blogs img {
     width: 100%;
     border-radius: 10px;
 }
@@ -48,3 +48,8 @@
 .hover {
     cursor: pointer;
 }
+
+/* .margin {
+    margin-left: 10vw;
+    margin-right: 10vw;
+} */

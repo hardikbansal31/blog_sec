@@ -13,7 +13,7 @@ const BlogCard = ({
   description: string;
   author: string;
 }) => (
-  <div className="col-md-4 col-sm-12 hover">
+  <div className={`col-md-4 col-sm-12 ${styles.hover}`}>
     <img src={image} alt={title} />
     <p>
       <b>{title}</b>
@@ -69,29 +69,29 @@ const Home = () => {
     <>
       {/* <!-- trending --> */}
       <div className={styles.trending}>
-        <div className="trend-left">
-          <p className={"trending-blog margin"}>#1 Today is...</p>
-          <h1 className="trending-blog margin">
+        <div className={styles.trend_left}>
+          <p className={`${styles.trending_blog}  margin`}>#1 Today is...</p>
+          <h1 className={`${styles.trending_blog} margin`}>
             <b>Trending Blog</b>
           </h1>
-          <p className="trending-blog margin">
+          <p className={`${styles.trending_blog} margin`}>
             <a href="author.html">By Author</a>, 5 min read
           </p>
-          <button className="btn bg-dark trending-blog margin">
+          <button className={`btn bg-dark ${styles.trending_blog} margin`}>
             Start Reading
           </button>
         </div>
-        <div className="trend-right ">
+        <div className={styles.trend_right}>
           <img src={logo} alt="author name" style={{ width: "50%" }} />
         </div>
       </div>
 
       {/* <!-- explore --> */}
-      <div className="explore">
-        <h1 className="margin">
+      <div className={`${styles.explore}`}>
+        <h1 className={`margin`}>
           <b>Explore more blogs</b>
         </h1>
-        <div className="row margin exp-blogs">
+        <div className={`row margin ${styles.exp_blogs}`}>
           {[
             {
               image: placeHolder,
@@ -119,7 +119,7 @@ const Home = () => {
 
       {/* <!-- About --> */}
       <div className="abt-home bg-black col-wh">
-        <p className="container">
+        <p className={`container`}>
           About us, copywrite, licences, customer support, report
         </p>
         <div className="icons margin">
