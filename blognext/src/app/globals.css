@@ -1,0 +1,54 @@
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
+
+* {
+  font-family: "Times New Roman", Times, serif;
+}
+
+.margin {
+  margin-left: 10vw;
+  margin-right: 10vw;
+}
+
+.btn {
+  border: 1px solid black;
+  border-radius: 5px;
+  color: wheat;
+}
+
+.btn:hover {
+  border: 1px solid black;
+  color: white;
+}
+
+.col-wh {
+  color: wheat !important;
+}
+
+.col-wh:hover {
+  color: white;
+}
+
+.form-control::placeholder {
+  color: lightgrey;
+  opacity: 1;
+}
+
+#text-box {
+  min-height: 200px;
+}
+
+.nav-img {
+  /* width: 7%; */
+}
+
+.abt-home {
+  margin-bottom: 0;
+}
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+} */

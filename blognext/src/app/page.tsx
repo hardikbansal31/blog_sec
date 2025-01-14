@@ -1,6 +1,5 @@
 import styles from "./Home.module.css";
-import placeHolder from "../assets/imgs/blog_placeholder.png";
-import logo from "../assets/imgs/lambo_logo.webp";
+import Image, { StaticImageData } from "next/image";
 
 const BlogCard = ({
   image,
@@ -8,13 +7,20 @@ const BlogCard = ({
   description,
   author,
 }: {
-  image: string;
+  image: string | StaticImageData;
   title: string;
   description: string;
   author: string;
 }) => (
   <div className={`col-md-4 col-sm-12 ${styles.hover}`}>
-    <img src={image} alt={title} />
+    <Image
+      src={image} // Supports both StaticImageData and string URLs
+      alt={title}
+      width={500} // Adjust width as per your design
+      height={300} // Adjust height as per your design
+      layout="responsive" // Makes the image responsive
+      objectFit="cover" // Adjusts image fit style (optional)
+    />
     <p>
       <b>{title}</b>
     </p>
@@ -82,7 +88,13 @@ const Home = () => {
           </button>
         </div>
         <div className={styles.trend_right}>
-          <img src={logo} alt="author name" style={{ width: "50%" }} />
+          <Image
+            src="/imgs/lambo_logo.webp" // Imported image
+            alt="author name"
+            width={200} // Adjust dimensions as needed
+            height={200}
+            style={{ width: "50%", height: "auto" }} // Inline styling if needed
+          />
         </div>
       </div>
 
@@ -94,19 +106,19 @@ const Home = () => {
         <div className={`row margin ${styles.exp_blogs}`}>
           {[
             {
-              image: placeHolder,
+              image: "/imgs/blog_placeholder.png",
               title: "blog title",
               description: "lorem",
               author: "auth name",
             },
             {
-              image: placeHolder,
+              image: "/imgs/blog_placeholder.png",
               title: "blog title",
               description: "lorem",
               author: "auth name",
             },
             {
-              image: placeHolder,
+              image: "/imgs/blog_placeholder.png",
               title: "blog title",
               description: "lorem",
               author: "auth name",

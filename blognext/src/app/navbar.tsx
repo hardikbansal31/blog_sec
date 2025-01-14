@@ -1,16 +1,22 @@
-import Logo from "../assets/imgs/lambo_logo.webp";
+import { auto } from "@popperjs/core";
+import Image from "next/image";
 
 const navbar = () => {
   return (
     <>
       <nav className="navbar navbar-expand-lg bg-black">
         <div className="container-fluid container">
-          <img
-            src= {Logo}
-            alt="home icon"
-            className="navbar-brand nav-img"
-          />
-          <button
+          <a href="/Home" className="navbar-brand">
+            <Image
+              src="/imgs/lambo_logo.webp"
+              alt="Home Icon"
+              width={101}
+              height={101}
+              className="nav-img"
+              priority // Optimizes the image for immediate loading (great for logos)
+            />
+          </a>
+          {/* <button
             className="navbar-toggler"
             type="button"
             data-bs-toggle="collapse"
@@ -20,15 +26,11 @@ const navbar = () => {
             aria-label="Toggle navigation"
           >
             <span className="navbar-toggler-icon"></span>
-          </button>
+          </button> */}
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <a
-                  className="nav-link col-wh"
-                  aria-current="page"
-                  href="/"
-                >
+                <a className="nav-link col-wh" aria-current="page" href="/">
                   Home
                 </a>
               </li>
