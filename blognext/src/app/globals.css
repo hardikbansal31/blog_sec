@@ -39,8 +39,14 @@
   min-height: 200px;
 }
 
-.nav-img {
-  /* width: 7%; */
+.nav-logo-container {
+  position: relative;
+  width: 70px; /* Adjust this to your desired width */
+  aspect-ratio: 1 / 1; /* Adjust to match the logo's natural ratio */
+}
+
+.nav-logo {
+  object-fit: contain; /* Ensures the image fits without cropping or stretching */
 }
 
 .abt-home {

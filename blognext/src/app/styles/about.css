@@ -8,9 +8,16 @@
     display: flex;
 }
 
+.abt-left {
+    margin-left: 10vw;
+    margin-right: 5vw;
+}
+
+.abt-right{
+    margin-right: 10vw;
+}
+
 .abt img{
-    width: 3px;
-    height: 3px;
     border-radius: 10px;
 }
 

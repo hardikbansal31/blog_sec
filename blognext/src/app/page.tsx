@@ -1,5 +1,6 @@
 import styles from "./Home.module.css";
 import Image, { StaticImageData } from "next/image";
+// import placeholder from "./assets/imgs/blog_placeholder.png";
 
 const BlogCard = ({
   image,
@@ -13,14 +14,15 @@ const BlogCard = ({
   author: string;
 }) => (
   <div className={`col-md-4 col-sm-12 ${styles.hover}`}>
-    <Image
-      src={image} // Supports both StaticImageData and string URLs
-      alt={title}
-      width={500} // Adjust width as per your design
-      height={300} // Adjust height as per your design
-      layout="responsive" // Makes the image responsive
-      objectFit="cover" // Adjusts image fit style (optional)
-    />
+    <div style={{ position: "relative", width: "100%", height: "300px" }}>
+      <Image
+        src={image} // Supports both StaticImageData and string URLs
+        alt={title}
+        fill // Makes the image fill its parent container
+        sizes="(max-width: 768px) 100vw, 50vw" // Defines responsive image sizes
+        style={{ objectFit: "cover" }} // Keeps the image cover effect
+      />
+    </div>
     <p>
       <b>{title}</b>
     </p>
@@ -112,13 +114,13 @@ const Home = () => {
               author: "auth name",
             },
             {
-              image: "/imgs/blog_placeholder.png",
+              image: "/assets/imgs/blog_placeholder.png",
               title: "blog title",
               description: "lorem",
               author: "auth name",
             },
             {
-              image: "/imgs/blog_placeholder.png",
+              image: "/assets/imgs/blog_placeholder.png",
               title: "blog title",
               description: "lorem",
               author: "auth name",

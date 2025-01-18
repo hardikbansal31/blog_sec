@@ -1,11 +1,12 @@
-
-import logo from "../assets/imgs/blog_placeholder.png";
+import "../styles/about.css";
+// import placeholder from "./assets/imgs/placeholder.png";
+import Image from "next/image";
 
 const about = () => {
   return (
     <>
       <div className="abt">
-        <div className="abt-left margin">
+        <div className="abt-left ">
           <h1 className="heading">
             <b>About Us</b>
           </h1>
@@ -24,11 +25,12 @@ const about = () => {
             molestias
           </p>
         </div>
-        <div className="abt-right margin">
-          <img
-            src={logo}
-            alt="logo here"
-            className="heading"
+        <div className="abt-right">
+          <Image
+            src="/assets/imgs/blog_placeholder.png"
+            alt="Placeholder"
+            width={500}
+            height={300}
           />
         </div>
       </div>
