@@ -14,7 +14,7 @@ const BlogCard = ({
   author: string;
 }) => (
   <div className={`col-md-4 col-sm-12 ${styles.hover}`}>
-    <div style={{ position: "relative", width: "100%", height: "300px" }}>
+    <div style={{ position: "relative", width: "100%", height: "250px" }}>
       <Image
         src={image} // Supports both StaticImageData and string URLs
         alt={title}
@@ -91,7 +91,7 @@ const Home = () => {
         </div>
         <div className={styles.trend_right}>
           <Image
-            src="/imgs/lambo_logo.webp" // Imported image
+            src="/assets/imgs/lambo_logo.webp" // Imported image
             alt="author name"
             width={200} // Adjust dimensions as needed
             height={200}
@@ -108,7 +108,7 @@ const Home = () => {
         <div className={`row margin ${styles.exp_blogs}`}>
           {[
             {
-              image: "/imgs/blog_placeholder.png",
+              image: "/assets/imgs/blog_placeholder.png",
               title: "blog title",
               description: "lorem",
               author: "auth name",
@@ -138,8 +138,6 @@ const Home = () => {
         </p>
         <div className="icons margin">
           <p>Socials</p>
-          width="16" height="16" fill="currentColor" className="bi bi-threads"
-          viewBox="0 0 16 16"
         </div>
       </div>
 

@@ -1,5 +1,6 @@
+"use client";
 import React, { FormEvent, useState } from "react";
-import { data } from "react-router-dom";
+import "../styles/create_blog.css";
 
 const create_blog = () => {
   const [responseMsg, setResponseMsg] = useState<string>("");
@@ -12,7 +13,9 @@ const create_blog = () => {
     const content = formData.get("content") as string;
     try {
       const response = await fetch(
-        `http://localhost:9000/api/blogs?title=${encodeURIComponent(title)}&content=${encodeURIComponent(content)}`
+        `http://localhost:9000/api/blogs?title=${encodeURIComponent(
+          title
+        )}&content=${encodeURIComponent(content)}`
       );
       const data = await response.json();
 
