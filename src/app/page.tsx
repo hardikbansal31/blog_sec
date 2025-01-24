@@ -1,6 +1,5 @@
 import styles from "./Home.module.css";
 import Image, { StaticImageData } from "next/image";
-// import placeholder from "./assets/imgs/blog_placeholder.png";
 
 const BlogCard = ({
   image,
