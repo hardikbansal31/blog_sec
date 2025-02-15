@@ -1,4 +1,4 @@
-import "../styles/about.css";
+import "../styles/about.module.css";
 // import placeholder from "./assets/imgs/placeholder.png";
 import Image from "next/image";
 

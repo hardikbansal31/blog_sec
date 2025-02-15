@@ -1,6 +1,6 @@
 "use client";
 import React, { FormEvent, useState } from "react";
-import "../styles/create_blog.css";
+import "../styles/create_blog.module.css";
 
 const create_blog = () => {
   const [responseMsg, setResponseMsg] = useState<string>("");

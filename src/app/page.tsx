@@ -1,4 +1,4 @@
-import styles from "./Home.module.css";
+import styles from "./page.module.css";
 import Image, { StaticImageData } from "next/image";
 
 const BlogCard = ({
@@ -129,18 +129,6 @@ const Home = () => {
           ))}
         </div>
       </div>
-
-      {/* <!-- About --> */}
-      <div className="abt-home bg-black col-wh">
-        <p className={`container`}>
-          About us, copywrite, licences, customer support, report
-        </p>
-        <div className="icons margin">
-          <p>Socials</p>
-        </div>
-      </div>
-
-      <a href="blog_page.html">blogpage</a>
     </>
   );
 };
