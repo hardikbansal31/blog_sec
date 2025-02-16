@@ -6,14 +6,17 @@
 
  .abt {
     display: flex;
+    background-color: black;
+    color: wheat;
+
 }
 
-.abt-left {
+.abtleft {
     margin-left: 10vw;
     margin-right: 5vw;
 }
 
-.abt-right{
+.abtright{
     margin-right: 10vw;
 }
 
@@ -35,3 +38,8 @@
     height: 40px;
 }
 
+.contact {
+    background-color: black;
+    color: wheat;
+    padding-top: 60px;
+}
