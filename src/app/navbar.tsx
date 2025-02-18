@@ -1,5 +1,6 @@
 // import { auto } from "@popperjs/core";
 import Image from "next/image";
+import Link from "next/link";
 // import logo from "./assets/imgs/lambo_logo.webp";
 
 const navbar = () => {
@@ -7,7 +8,7 @@ const navbar = () => {
     <>
       <nav className="navbar navbar-expand-lg bg-black">
         <div className="container-fluid container">
-          <a href="/" className="navbar-brand">
+          <Link href="/" className="navbar-brand">
             <div className="nav-logo-container">
               <Image
                 src="/assets/imgs/lambo_logo.webp"
@@ -18,7 +19,7 @@ const navbar = () => {
                 priority // Marks image for immediate loading
               />
             </div>
-          </a>
+          </Link>
           {/* <button
             className="navbar-toggler"
             type="button"
@@ -33,43 +34,43 @@ const navbar = () => {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <a className="nav-link col-wh" aria-current="page" href="/">
+                <Link href="/" className="nav-link col-wh" aria-current="page">
                   Home
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link col-wh" href="/about">
+                <Link href="/about" className="nav-link col-wh">
                   About Us
-                </a>
+                </Link>
               </li>
               <li className="nav-item dropdown">
-                <a
+                <Link
+                  href="/"
                   className="nav-link dropdown-toggle col-wh"
-                  href="#"
                   role="button"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
                   Categories
-                </a>
+                </Link>
                 <ul className="dropdown-menu">
                   <li>
-                    <a className="dropdown-item" href="#">
+                    <Link href="/" className="dropdown-item">
                       Action
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a className="dropdown-item" href="#">
-                      Another action
-                    </a>
+                    <Link href="/" className="dropdown-item">
+                      action
+                    </Link>
                   </li>
                   <li>
                     <hr className="dropdown-divider" />
                   </li>
                   <li>
-                    <a className="dropdown-item" href="#">
-                      Something else here
-                    </a>
+                    <Link href="/" className="dropdown-item">
+                      soemthing
+                    </Link>
                   </li>
                 </ul>
               </li>
@@ -78,9 +79,7 @@ const navbar = () => {
                   className="btn btn-outline-success bg-dark col-wh"
                   type="button"
                 >
-                  <a href="/create" className="col-wh">
-                    Create Blog
-                  </a>
+                  <Link href="/create" className="col-wh">Create Blog</Link>
                 </button>
               </li>
             </ul>
@@ -95,7 +94,7 @@ const navbar = () => {
                 className="btn btn-outline-success bg-dark col-wh"
                 type="submit"
               >
-                <a href="search.html">Search</a>
+                <Link href="/">search</Link>
               </button>
             </form>
           </div>

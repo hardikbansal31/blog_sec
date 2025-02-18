@@ -41,7 +41,7 @@ const footer = () => {
               </div>
             </div>
           </div>
-          © Hardik's Blog, All Right Reserved.
+          © Hardik&apos;s Blog, All Right Reserved.
         </div>
       </div>
     </>

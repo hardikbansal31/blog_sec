@@ -2,7 +2,7 @@
 import React, { FormEvent, useState } from "react";
 import "../styles/create_blog.module.css";
 
-const create_blog = () => {
+const CreateBlog = () => {
   const [responseMsg, setResponseMsg] = useState<string>("");
 
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
@@ -88,4 +88,4 @@ const create_blog = () => {
   );
 };
 
-export default create_blog;
+export default CreateBlog;
