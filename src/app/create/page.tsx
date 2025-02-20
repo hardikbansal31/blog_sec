@@ -35,23 +35,25 @@ const CreateBlog = () => {
         <form onSubmit={handleSubmit} id="form">
           <div className="form-group">
             <label htmlFor="title">
-              <h3>title</h3>
+              <h3>Title</h3>
             </label>
             <input
               type="text"
               className="form-control"
               id="title"
               name="title"
-              placeholder="max 100 chars"
+              placeholder="Max 100 chars"
               required
             />
           </div>
 
-          <div className="form-group">
+          <div
+            className="form-group"
+            style={{ marginBottom: "20px", marginTop: "20px" }}
+          >
             <label htmlFor="hashes">
-              <h3>select hashtags</h3>
+              <h3>Select Hashtags</h3>
             </label>
-            {/* Example for multi-select dropdown */}
             <select multiple className="form-control" id="hashes">
               <option>1</option>
               <option>2</option>
@@ -63,23 +65,23 @@ const CreateBlog = () => {
 
           <div className="form-group">
             <label htmlFor="content">
-              <h3>content</h3>
+              <h3>Content</h3>
             </label>
             <textarea
               name="content"
               id="content"
               className="form-control"
-              rows={10}
-              placeholder="max 10k chars"
+              rows={20}
+              placeholder="Max 10k chars"
               required
             ></textarea>
           </div>
           <button
             type="submit"
             className="btn bg-dark"
-            style={{ marginBottom: "50px" }}
+            style={{ marginBottom: "20px", marginTop: "20px" }}
           >
-            submit
+            Submit
           </button>
         </form>
         <div id="response-msg">{responseMsg}</div>

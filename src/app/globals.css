@@ -41,20 +41,14 @@
 
 .nav-logo-container {
   position: relative;
-  width: 70px; /* Adjust this to your desired width */
-  aspect-ratio: 1 / 1; /* Adjust to match the logo's natural ratio */
+  width: 70px; 
+  aspect-ratio: 1 / 1;
 }
 
 .nav-logo {
-  object-fit: contain; /* Ensures the image fits without cropping or stretching */
+  object-fit: contain; 
 }
 
 .abt-home {
   margin-bottom: 0;
 }
-/* @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-} */

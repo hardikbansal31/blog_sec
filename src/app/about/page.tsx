@@ -35,8 +35,8 @@ const about = () => {
         </div>
       </div>
 
-      <div className={styles.contact}>
-        <div className="row margin">
+      <div className={styles.contact} >
+        <div className="row margin" >
           <div className="col-md-6 col-sm-12" >
             <h1 className="margin">
               <b>Our Mission</b>
