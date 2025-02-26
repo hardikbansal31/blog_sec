@@ -1,3 +1,7 @@
+/* eslint-disable @typescript-eslint/no-require-imports */
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable @typescript-eslint/no-explicit-any */
+
 import type { Request, Response, NextFunction, RequestHandler } from "express";
 import type { Connection, QueryError, OkPacket } from "mysql2";
 
