@@ -86,6 +86,7 @@ const Home = () => {
           </p>
           <button className={`btn bg-dark ${styles.trending_blog} margin`}>
             Start Reading
+            latest
           </button>
         </div>
         <div className={styles.trend_right}>
