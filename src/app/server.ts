@@ -1,16 +1,15 @@
-import express, {
-  Request,
-  Response,
-  NextFunction,
-  RequestHandler,
-} from "express";
-import mysql, { Connection, QueryError, OkPacket } from "mysql2";
+import type { Request, Response, NextFunction, RequestHandler } from "express";
+import type { Connection, QueryError, OkPacket } from "mysql2";
 
-import cors from "cors";
+const express = require("express");
+const mysql = require("mysql2");
+const cors = require("cors");
+
 const app = express();
 app.use(cors());
 const port = 9000;
 
+// Middleware to parse JSON bodies
 app.use(express.json());
 
 const connection: Connection = mysql.createConnection({
@@ -28,12 +27,14 @@ connection.connect((err: QueryError | null) => {
   console.log("Connected to MySQL");
 });
 
+// Define a POST request handler
 const blogHandler: RequestHandler = (
   req: Request,
   res: Response,
   next: NextFunction
 ): void => {
-  const { title, content } = req.query;
+  // Extract data from req.body instead of req.query
+  const { title, content } = req.body;
 
   if (typeof title !== "string" || typeof content !== "string") {
     res
@@ -60,7 +61,8 @@ const blogHandler: RequestHandler = (
   );
 };
 
-app.get("/api/blogs", blogHandler);
+// Change to POST endpoint
+app.post("/api/blogs", blogHandler);
 
 app.listen(port, () => {
   console.log(`Express server listening on port ${port}`);
