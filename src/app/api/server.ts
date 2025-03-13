@@ -2,6 +2,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
+import { error } from "console";
 import type { Request, Response, NextFunction, RequestHandler } from "express";
 import type { Connection, QueryError, OkPacket } from "mysql2";
 
@@ -65,8 +66,37 @@ const blogHandler: RequestHandler = (
   );
 };
 
+const blogGetter: RequestHandler = (
+  req: Request,
+  res: Response,
+  next: NextFunction
+): void => {
+  const { title, content } = req.body;
+  if (typeof title !== "string" || typeof content !== "string") {
+    res.status(400).json({ error: "title, content not provided as str " });
+    return;
+  }
+
+  const sql = "SELECT * FROM blogs (title, content) WHERE id = 1";
+  connection.query(
+    sql,
+    [title, content],
+    (err: QueryError | null, result: any) => {
+      if (err) {
+        console.error("Database error", err);
+        res.status(500).json({ error: "db error" });
+        return;
+      }
+      res.json({
+        message: "blog retrieved",
+      });
+    }
+  );
+};
+
 // Change to POST endpoint
 app.post("/api/blogs", blogHandler);
+app.get("/api/get", blogGetter);
 
 app.listen(port, () => {
   console.log(`Express server listening on port ${port}`);
