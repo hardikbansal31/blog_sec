@@ -12,7 +12,7 @@ const CreateBlog = () => {
     const title = formData.get("title") as string;
     const content = formData.get("content") as string;
     try {
-      const response = await fetch("http://localhost:9000/api/blogs", {
+      const response = await fetch("http://localhost:8080/api/blogs", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
